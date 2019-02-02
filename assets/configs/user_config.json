@@ -1,0 +1,27 @@
+{
+	"DEFAULTS" : {
+		"DEVICES" : "AUTO",
+		"APIPORT" : 0
+	},
+	"AIONMINE" :
+	{
+		"COIN" : "AION",
+		"SHORTSTATS" : 10,
+		"LONGSTATS" : 120,
+		"DIGITS" : 2,
+		"POOLS" : [
+			{
+			 "POOL" : "stratum.aionmine.org",
+			 "PORT" : "3333",
+			 "USER" : "0xa0102f5fb2dd4ea7220028771b0ae2d50003ddac6225f93cff277467168b3c18.rigName1",
+			 "PASS" : "x"
+			},
+			{
+			 "POOL" : "stratum.glorypool.io",
+			 "PORT" : "3333",
+			 "USER" : "0xa0102f5fb2dd4ea7220028771b0ae2d50003ddac6225f93cff277467168b3c18.rigName1",
+			 "PASS" : "x"
+			}
+		]
+	}
+}

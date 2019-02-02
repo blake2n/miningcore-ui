@@ -2,11 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="assets/img/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <title>miningcore-ui</title>
+    <title>Pool Stats</title>
 
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport"/>
     <meta name="viewport" content="width=device-width"/>
@@ -18,7 +33,7 @@
     <link href="assets/css/animate.min.css" rel="stylesheet"/>
 
     <!--  Paper Dashboard core CSS    -->
-    <link href="assets/css/paper-dashboard.css" rel="stylesheet"/>
+    <link href="assets/css/paper-dashboard1a.css" rel="stylesheet"/>
 
     <!--  Fonts and icons     -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"/>
@@ -30,32 +45,32 @@
 <div class="wrapper">
     <div class="sidebar" data-background-color="white" data-active-color="danger">
         <div class="sidebar-wrapper">
-            <!--<div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
-                    miningcore-ui
-                </a>
-            </div>-->
-            <ul class="nav">
-                <li class="active">
-                    <a href="stats.html">
-                        <i class="ti-stats-up"></i>
-                        <p>Stats</p>
+            <div class="logo" align="center">
+                    <div class="image"><img src="assets/img/aionmine.png" alt=""></div><a href="/" class="simple-text">
+                            AIONMINE.ORG
                     </a>
-                </li>
+            </div>
+            <ul class="nav">
                 <li>
                     <a href="dashboard.html">
                         <i class="ti-dashboard"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
+				<li class="active">
+                    <a href="stats.html">
+                        <i class="ti-stats-up"></i>
+                        <p>Pool Stats</p>
+                    </a>
+                </li>
                 <li>
-                    <a href="miners.html">
+                    <a href="sminers.html">
                         <i class="ti-user"></i>
                         <p>Miners</p>
                     </a>
                 </li>
                 <li>
-                    <a href="blocks.html">
+                    <a href="sblocks.html">
                         <i class="ti-layers"></i>
                         <p>Blocks</p>
                     </a>
@@ -72,16 +87,21 @@
                         <p>Connect</p>
                     </a>
                 </li>
-                <li>
-                    <a href="alerts.html">
-                        <i class="ti-bell"></i>
-                        <p>Alerts</p>
+				<li>
+                    <a href="aion.html">
+                        <i class="ti-wallet"></i>
+                        <p>Aion Wallet</p>
+                    </a>
+                </li>
+				<li>
+                    <a href="contact.html">
+                        <i class="ti-support"></i>
+                        <p>Contact</p>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
             <div class="container-fluid">
@@ -92,7 +112,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="stats.html">Stats</a>
+                    <a class="navbar-brand" href="stats.html">POOL STATS</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -102,94 +122,13 @@
                                 <p></p>
                             </a>
                         </li>
-                        <!--<li>
-                            <a href="#">
-                                <i class="ti-settings"></i>
-                                <p>Settings</p>
-                            </a>
-                        </li>-->
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="content">
             <div class="container-fluid">
-                <div class="row">
-                    <!--<div class="col-lg-6 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="icon-big icon-success">
-                                            <i class="ti-receipt"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-10">
-                                        <div class="numbers">
-                                            <p>Shares</p>
-                                            <div id="poolShares"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr/>
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Update every minute
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="icon-big icon-success">
-                                            <i class="ti-package"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-10">
-                                        <div class="numbers">
-                                            <p>Blocks</p>
-                                            <div id="poolBlocks"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr/>
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Update every minute
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
-                    <div class="col-lg-6 col-sm-6">
-                        <div class="card">
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-xs-2">
-                                        <div class="icon-big icon-info">
-                                            <i class="ti-user"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-10">
-                                        <div class="numbers">
-                                            <p>Miners</p>
-                                            <div id="poolMiners"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="footer">
-                                    <hr/>
-                                    <div class="stats">
-                                        <i class="ti-reload"></i> Update every minute
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row"> 
                     <div class="col-lg-6 col-sm-6">
                         <div class="card">
                             <div class="content">
@@ -220,14 +159,14 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-2">
-                                        <div class="icon-big icon-info">
-                                            <i class="ti-pulse"></i>
+                                        <div class="icon-big icon-aiongreen">
+                                            <i class="ti-layout-grid3"></i>
                                         </div>
                                     </div>
                                     <div class="col-xs-10">
                                         <div class="numbers">
-                                            <p>Network's Hash Rate</p>
-                                            <div id="networkHashRate"></div>
+                                            <p>Block Height</p>
+                                            <div id="lastBlockHeight"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -245,7 +184,32 @@
                             <div class="content">
                                 <div class="row">
                                     <div class="col-xs-2">
-                                        <div class="icon-big icon-warning">
+                                        <div class="icon-big icon-green">
+                                            <i class="ti-timer"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="numbers">
+                                            <p>Shares Per Second</p>
+                                            <div id="sharesPerSecond"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <hr/>
+                                    <div class="stats">
+                                        <i class="ti-reload"></i> Update every minute
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>					
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <div class="icon-big icon-orange">
                                             <i class="ti-hummer"></i>
                                         </div>
                                     </div>
@@ -253,6 +217,56 @@
                                         <div class="numbers">
                                             <p>Network Difficulty</p>
                                             <div id="networkDifficulty"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <hr/>
+                                    <div class="stats">
+                                        <i class="ti-reload"></i> Update every minute
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-lg-6 col-sm-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <div class="icon-big icon-purple">
+                                            <i class="ti-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="numbers">
+                                            <p>Connected Miners</p>
+                                            <div id="poolMiners"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <hr/>
+                                    <div class="stats">
+                                        <i class="ti-reload"></i> Update every minute
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<div class="col-lg-6 col-sm-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="row">
+                                    <div class="col-xs-2">
+                                        <div class="icon-big icon-red">
+                                            <i class="ti-heart"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-10">
+                                        <div class="numbers">
+                                            <p>Total rewarded to miners</p>
+                                            <div id="totalPaid"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -275,8 +289,7 @@
                                 <div id="chartStatsHashRate" class="ct-chart"></div>
                                 <div class="footer">
                                     <div class="chart-legend">
-                                        <i class="fa fa-circle text-info"></i> Network
-                                        <i class="fa fa-circle text-warning"></i> Pool
+                                        <i class="fa fa-circle text-info"></i> Pool
                                     </div>
                                     <hr>
                                     <div class="stats">
@@ -304,7 +317,6 @@
                 </div>
             </div>
         </div>
-
         <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
@@ -319,8 +331,8 @@
                 <div class="copyright pull-right">
                     &copy;
                     <script>document.write(new Date().getFullYear())</script>
-                    , theme made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com">Creative
-                    Tim</a>
+                    , theme made with <i class="fa fa-heart heart"></i> by <a href="http://www.creative-tim.com" target="_new">Creative
+                    Tim</a> modified by <a href="z.html">Blake2n</a>
                 </div>
             </div>
         </footer>
@@ -342,13 +354,10 @@
 <!--  Notifications Plugin    -->
 <script src="assets/js/bootstrap-notify.js"></script>
 
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
 <!-- Paper Dashboard Core javascript and methods -->
 <script src="assets/js/paper-dashboard.js"></script>
 
-<script src="assets/js/miningcore-ui.js"></script>
+<script src="assets/js/miningcore-ui18s.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         var renderCallback = $.Callbacks();

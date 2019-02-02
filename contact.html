@@ -21,7 +21,7 @@
 	<meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-    <title>Aionmine - Pool Payments</title>
+    <title>Contact Links</title>
 
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport"/>
     <meta name="viewport" content="width=device-width"/>
@@ -41,12 +41,11 @@
     <link href="assets/css/themify-icons.css" rel="stylesheet"/>
 </head>
 <body>
-
 <div class="wrapper">
     <div class="sidebar" data-background-color="white" data-active-color="danger">
         <div class="sidebar-wrapper">
-            <div class="logo" align="center">
-                    <div class="image"><img src="assets/img/aionmine.png" alt=""></div><a href="/" class="simple-text">
+            <div class="logo">
+                    <div class="image" align="center"><img src="assets/img/aionmine.png" alt=""></div><a href="/" class="simple-text">
                             AIONMINE.ORG
                     </a>
             </div>
@@ -75,7 +74,7 @@
                         <p>Blocks</p>
                     </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="payments.html">
                         <i class="ti-wallet"></i>
                         <p>Payments</p>
@@ -93,7 +92,7 @@
                         <p>Aion Wallet</p>
                     </a>
                 </li>
-				<li>
+				<li class="active">
                     <a href="contact.html">
                         <i class="ti-support"></i>
                         <p>Contact</p>
@@ -112,7 +111,7 @@
                         <span class="icon-bar bar2"></span>
                         <span class="icon-bar bar3"></span>
                     </button>
-                    <a class="navbar-brand" href="payments.html">Payments (Pool)</a>
+                    <a class="navbar-brand" href="contact.html">Contact page</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -129,13 +128,25 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-lg-12 col-sm-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Last 200 Payments Rewarded</h4>
+                                <h3 class="title">Contact Links</h3>
                             </div>
-                            <div class="content table-responsive table-full-width">
-                                <table id="paymentList" class="table table-striped"></table>
+							<div class="content">
+                                <div class="content">
+								<h3>Aionmine</h3>
+								<p>Aionmine on <a href="https://t.me/aionmining" target="_new">Telegram <i class="ti-arrow-circle-right"></i></a></p>
+								</div>
+                            </div>
+							<div class="content">
+                                <div class="content">
+								<h3>Aion Official</h3>
+								<p>Aion.Network <a href="https://aion.network" target="_new">Website <i class="ti-crown"></i></a></p>
+								<p>Aion.Network <a href="https://github.com/aionnetwork" target="_new">Github <i class="ti-github"></i></a></p>
+								<p>Aion.Network <a href="https://mainnet.aion.network" target="_new">Block Explorer <i class="ti-layout-grid3"></i></a></p>
+								<p>Aion.Network <a href="https://www.reddit.com/r/AionNetwork/" target="_new">Reddit <i class="ti-reddit"></i></a></p>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -163,9 +174,7 @@
         </footer>
     </div>
 </div>
-
 </body>
-
 <!--   Core JS Files   -->
 <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -179,18 +188,26 @@
 <!--  Notifications Plugin    -->
 <script src="assets/js/bootstrap-notify.js"></script>
 
-<!--  Google Maps Plugin    -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
 <!-- Paper Dashboard Core javascript and methods -->
 <script src="assets/js/paper-dashboard.js"></script>
 
-<script src="assets/js/miningcore-ui18p.js"></script>
+<script src="assets/js/miningcore-ui17am1.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         var renderCallback = $.Callbacks();
         renderCallback.add(function () {
-            loadPaymentsList();
+            function render() {
+                setInterval(function load() {
+                    loadStatsData();
+                    return load;
+                }(), 60000);
+                setInterval(function load() {
+                    loadStatsChart();
+                    return load;
+                }(), 600000);
+            }
+
+            render();
         });
         loadPools(renderCallback);
     });
